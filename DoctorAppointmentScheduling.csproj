@@ -1,0 +1,606 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D569E3F0-DBFE-4C26-8C41-D8905CE612D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoctorAppointmentScheduling</RootNamespace>
+    <AssemblyName>DoctorAppointmentScheduling</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ACLProject\CarpetWebApp\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\addadmin.aspx" />
+    <Content Include="Admin\AdminChangepwd.aspx" />
+    <Content Include="Admin\adminhome.aspx" />
+    <Content Include="Admin\doctor.aspx" />
+    <Content Include="Admin\patient.aspx" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\about.jpg" />
+    <Content Include="assets\img\apolo.PNG" />
+    <Content Include="assets\img\apple-touch-icon.png" />
+    <Content Include="assets\img\cancel.png" />
+    <Content Include="assets\img\departments-1.jpg" />
+    <Content Include="assets\img\departments-2.jpg" />
+    <Content Include="assets\img\departments-3.jpg" />
+    <Content Include="assets\img\departments-4.jpg" />
+    <Content Include="assets\img\departments-5.jpg" />
+    <Content Include="assets\img\doctors\doctors-1.jpg" />
+    <Content Include="assets\img\doctors\doctors-2.jpg" />
+    <Content Include="assets\img\doctors\doctors-3.jpg" />
+    <Content Include="assets\img\doctors\doctors-4.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\gallery\gallery-1.jpg" />
+    <Content Include="assets\img\gallery\gallery-2.jpg" />
+    <Content Include="assets\img\gallery\gallery-3.jpg" />
+    <Content Include="assets\img\gallery\gallery-4.jpg" />
+    <Content Include="assets\img\gallery\gallery-5.jpg" />
+    <Content Include="assets\img\gallery\gallery-6.jpg" />
+    <Content Include="assets\img\gallery\gallery-7.jpg" />
+    <Content Include="assets\img\gallery\gallery-8.jpg" />
+    <Content Include="assets\img\hero-bg.jpg" />
+    <Content Include="assets\img\patient.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="assets\img\updated.png" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\RememberMePassword.js" />
+    <Content Include="assets\scss\Readme.txt" />
+    <Content Include="assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="assets\vendor\animate.css\animate.css" />
+    <Content Include="assets\vendor\animate.css\animate.min.css" />
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\vendor\boxicons\css\animations.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="assets\vendor\fontawesome-free\css\all.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v4-font-face.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v4-font-face.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v5-font-face.css" />
+    <Content Include="assets\vendor\fontawesome-free\css\v5-font-face.min.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\vendor\php-email-form\validate.js" />
+    <Content Include="assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="assets\vendor\remixicon\remixicon.css" />
+    <Content Include="assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Doctor\appointment.aspx" />
+    <Content Include="Doctor\ApproveAppointment.aspx" />
+    <Content Include="Doctor\doctorChangePassword.aspx" />
+    <Content Include="Doctor\doctorhome.aspx" />
+    <Content Include="Doctor\doctorprofile.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="home.aspx" />
+    <Content Include="info.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Medilab\assets\css\style.css" />
+    <Content Include="Medilab\assets\img\about.jpg" />
+    <Content Include="Medilab\assets\img\apple-touch-icon.png" />
+    <Content Include="Medilab\assets\img\departments-1.jpg" />
+    <Content Include="Medilab\assets\img\departments-2.jpg" />
+    <Content Include="Medilab\assets\img\departments-3.jpg" />
+    <Content Include="Medilab\assets\img\departments-4.jpg" />
+    <Content Include="Medilab\assets\img\departments-5.jpg" />
+    <Content Include="Medilab\assets\img\doctors\doctors-1.jpg" />
+    <Content Include="Medilab\assets\img\doctors\doctors-2.jpg" />
+    <Content Include="Medilab\assets\img\doctors\doctors-3.jpg" />
+    <Content Include="Medilab\assets\img\doctors\doctors-4.jpg" />
+    <Content Include="Medilab\assets\img\favicon.png" />
+    <Content Include="Medilab\assets\img\gallery\gallery-1.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-2.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-3.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-4.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-5.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-6.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-7.jpg" />
+    <Content Include="Medilab\assets\img\gallery\gallery-8.jpg" />
+    <Content Include="Medilab\assets\img\hero-bg.jpg" />
+    <Content Include="Medilab\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Medilab\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Medilab\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Medilab\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Medilab\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Medilab\assets\js\main.js" />
+    <Content Include="Medilab\assets\scss\Readme.txt" />
+    <Content Include="Medilab\assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="Medilab\assets\vendor\animate.css\animate.css" />
+    <Content Include="Medilab\assets\vendor\animate.css\animate.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Medilab\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="Medilab\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Medilab\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Medilab\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="Medilab\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v4-font-face.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v4-font-face.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v5-font-face.css" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\css\v5-font-face.min.css" />
+    <Content Include="Medilab\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Medilab\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Medilab\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Medilab\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Medilab\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Medilab\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Medilab\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Medilab\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.css" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="Medilab\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Medilab\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Medilab\changelog.txt" />
+    <Content Include="Medilab\forms\appointment.php" />
+    <Content Include="Medilab\forms\contact.php" />
+    <Content Include="Medilab\forms\Readme.txt" />
+    <Content Include="Medilab\index.html" />
+    <Content Include="Medilab\inner-page.html" />
+    <Content Include="Medilab\Readme.txt" />
+    <Content Include="Patient\changepassword.aspx" />
+    <Content Include="Patient\newappointment.aspx" />
+    <Content Include="Patient\patienthome.aspx" />
+    <Content Include="Patient\profile.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\addadmin.aspx.cs">
+      <DependentUpon>addadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addadmin.aspx.designer.cs">
+      <DependentUpon>addadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangepwd.aspx.cs">
+      <DependentUpon>AdminChangepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangepwd.aspx.designer.cs">
+      <DependentUpon>AdminChangepwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminhome.aspx.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminhome.aspx.designer.cs">
+      <DependentUpon>adminhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSite1.Master.cs">
+      <DependentUpon>AdminSite1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSite1.Master.designer.cs">
+      <DependentUpon>AdminSite1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\doctor.aspx.cs">
+      <DependentUpon>doctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\doctor.aspx.designer.cs">
+      <DependentUpon>doctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\patient.aspx.cs">
+      <DependentUpon>patient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\patient.aspx.designer.cs">
+      <DependentUpon>patient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\appointment.aspx.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\appointment.aspx.designer.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\ApproveAppointment.aspx.cs">
+      <DependentUpon>ApproveAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\ApproveAppointment.aspx.designer.cs">
+      <DependentUpon>ApproveAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\doctorChangePassword.aspx.cs">
+      <DependentUpon>doctorChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\doctorChangePassword.aspx.designer.cs">
+      <DependentUpon>doctorChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\doctorhome.aspx.cs">
+      <DependentUpon>doctorhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\doctorhome.aspx.designer.cs">
+      <DependentUpon>doctorhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\doctorprofile.aspx.cs">
+      <DependentUpon>doctorprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\doctorprofile.aspx.designer.cs">
+      <DependentUpon>doctorprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\DoctorSite1.Master.cs">
+      <DependentUpon>DoctorSite1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\DoctorSite1.Master.designer.cs">
+      <DependentUpon>DoctorSite1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="info.aspx.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="info.aspx.designer.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\newappointment.aspx.cs">
+      <DependentUpon>newappointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\newappointment.aspx.designer.cs">
+      <DependentUpon>newappointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\patienthome.aspx.cs">
+      <DependentUpon>patienthome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\patienthome.aspx.designer.cs">
+      <DependentUpon>patienthome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\PatientSite1.Master.cs">
+      <DependentUpon>PatientSite1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\PatientSite1.Master.designer.cs">
+      <DependentUpon>PatientSite1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="assets\vendor\remixicon\remixicon.less" />
+    <Content Include="assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="Medilab\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Medilab\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Medilab\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Medilab\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Medilab\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Medilab\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Medilab\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Medilab\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Medilab\assets\vendor\fontawesome-free\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.less" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="Medilab\assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="Admin\AdminSite1.Master" />
+    <Content Include="Doctor\DoctorSite1.Master" />
+    <None Include="packages.config" />
+    <Content Include="Patient\PatientSite1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3444</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3444/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
